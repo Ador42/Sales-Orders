@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
+    <meta name="theme-color" content="#1565c0">
+
+    <title>Ador Orders</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="app-header">
+        <h1>Ador Orders</h1>
+        <p>Sales Order Management</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Dashboard -->
+        <section id="dashboard">
+            <h2>ড্যাশবোর্ড</h2>
+
+            <div class="dashboard-cards">
+
+                <div class="card">
+                    <h3>মোট অর্ডার</h3>
+                    <p id="totalOrders">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>মোট বিক্রয়</h3>
+                    <p id="totalSales">৳ 0</p>
+                </div>
+
+                <div class="card">
+                    <h3>মোট বকেয়া</h3>
+                    <p id="totalDue">৳ 0</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="navigation">
+
+            <button onclick="showSection('newOrder')">
+                নতুন অর্ডার
+            </button>
+
+            <button onclick="showSection('orderList')">
+                অর্ডার লিস্ট
+            </button>
+
+            <button onclick="showSection('products')">
+                প্রোডাক্ট
+            </button>
+
+            <button onclick="showSection('reports')">
+                রিপোর্ট
+            </button>
+
+        </nav>
+
+        <!-- New Order -->
+        <section id="newOrder" class="app-section">
+
+            <h2>নতুন অর্ডার তৈরি</h2>
+
+            <label>কাস্টমারের নাম</label>
+            <input type="text" id="customerName"
+                   placeholder="কাস্টমারের নাম">
+
+            <label>মোবাইল নম্বর</label>
+            <input type="tel" id="customerPhone"
+                   placeholder="মোবাইল নম্বর">
+
+            <label>ঠিকানা</label>
+            <textarea id="customerAddress"
+                      placeholder="কাস্টমারের ঠিকানা"></textarea>
+
+            <label>প্রোডাক্ট সার্চ</label>
+            <input type="text" id="prodSearch"
+                   placeholder="প্রোডাক্টের নাম লিখুন">
+
+            <div id="prodSuggest"></div>
+
+            <div id="cartContainer"></div>
+
+            <div class="card">
+                <h3>অর্ডারের হিসাব</h3>
+
+                <p>
+                    মোট:
+                    <span id="orderTotal">৳ 0</span>
+                </p>
+
+                <label>জমা</label>
+                <input type="number" id="paidAmount"
+                       value="0" min="0">
+
+                <p>
+                    বকেয়া:
+                    <span id="dueAmount">৳ 0</span>
+                </p>
+            </div>
+
+            <label>নোট</label>
+            <textarea id="orderNote"></textarea>
+
+            <button id="saveOrder">
+                অর্ডার সংরক্ষণ
+            </button>
+
+        </section>
+
+        <!-- Order List -->
+        <section id="orderList" class="app-section hidden">
+
+            <h2>অর্ডার লিস্ট</h2>
+
+            <input type="text" id="orderSearch"
+                   placeholder="অর্ডার সার্চ করুন">
+
+            <div id="ordersContainer"></div>
+
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="app-section hidden">
+
+            <h2>প্রোডাক্ট ম্যানেজমেন্ট</h2>
+
+            <div id="productsContainer"></div>
+
+        </section>
+
+        <!-- Reports -->
+        <section id="reports" class="app-section hidden">
+
+            <h2>রিপোর্ট</h2>
+
+            <div id="reportsContainer"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
