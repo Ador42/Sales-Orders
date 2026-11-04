@@ -1,1 +1,311 @@
 
+/* =========================================
+   ADOR ORDERS — MODERN MOBILE DESIGN
+========================================= */
+
+:root {
+    --primary: #1565c0;
+    --primary-dark: #0d47a1;
+    --background: #f1f5f9;
+    --surface: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --radius: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, "Noto Sans Bengali", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+
+/* HEADER */
+
+.app-header {
+    background: linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--primary)
+    );
+
+    color: white;
+    padding: 25px 20px;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 5px 20px rgba(21, 101, 192, 0.2);
+}
+
+.app-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.app-header p {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    padding: 18px 14px;
+}
+
+/* HEADINGS */
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* DASHBOARD */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: var(--surface);
+    padding: 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 14px;
+}
+
+.dashboard-cards .card {
+    border-top: 3px solid var(--primary);
+}
+
+.card h3 {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+/* NAVIGATION */
+
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.navigation button {
+    background: white;
+    color: var(--primary-dark);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+/* SECTIONS */
+
+.app-section {
+    background: white;
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* FORM */
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 14px 0 6px;
+    color: var(--text);
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #f8fafc;
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* SEARCH SUGGESTION */
+
+#prodSuggest {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#prodSuggest:empty {
+    display: none;
+}
+
+/* CART */
+
+#cartContainer {
+    margin-top: 15px;
+}
+
+#cartContainer .card {
+    border-left: 4px solid var(--primary);
+}
+
+/* ORDER TOTAL */
+
+#orderTotal {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#dueAmount {
+    color: var(--danger);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* SAVE BUTTON */
+
+#saveOrder {
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 16px;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+    border-radius: 12px;
+}
+
+/* ORDER LIST */
+
+#ordersContainer {
+    margin-top: 15px;
+}
+
+#ordersContainer .card {
+    border-left: 4px solid var(--success);
+}
+
+/* PRODUCTS */
+
+#productsContainer {
+    margin-top: 15px;
+}
+
+/* REPORTS */
+
+#reportsContainer {
+    margin-top: 15px;
+}
+
+/* SMALL SCREEN */
+
+@media (max-width: 360px) {
+
+    .container {
+        padding: 12px 10px;
+    }
+
+    .app-header h1 {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card p {
+        font-size: 19px;
+    }
+
+    .app-section {
+        padding: 14px;
+    }
+}
+
+/* TOUCH FRIENDLY */
+
+button,
+input,
+select {
+    min-height: 44px;
+}
+
+/* SCROLL */
+
+html {
+    scroll-behavior: smooth;
+}
